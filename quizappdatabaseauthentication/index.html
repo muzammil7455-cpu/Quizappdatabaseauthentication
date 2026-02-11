@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Firebase Compat SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+</head>
+<body>
+
+<!-- AUTH SECTION -->
+<div class="container" id="authBox">
+  <h2>Signup</h2>
+  <input type="email" id="signupEmail" placeholder="Email">
+  <input type="password" id="signupPassword" placeholder="Password">
+  <button onclick="signup()">Sign Up</button>
+
+  <hr>
+
+  <h2>Login</h2>
+  <input type="email" id="loginEmail" placeholder="Email">
+  <input type="password" id="loginPassword" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<!-- QUIZ SECTION -->
+<div class="box" id="quizBox" style="display:none;">
+  <h2 id="ques"></h2>
+
+  <div class="box1">A:<p class="box2"></p></div>
+  <div class="box1">B:<p class="box2"></p></div>
+  <div class="box1">C:<p class="box2"></p></div>
+  <div class="box1">D:<p class="box2"></p></div>
+
+  <div id="nxt" class="nxt">Next</div>
+</div>
+
+<div class="win" id="resultBox" style="display:none;">
+  <h1 id="resultText"></h1>
+  <button onclick="location.reload()">Try Again</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
